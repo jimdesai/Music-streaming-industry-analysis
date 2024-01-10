@@ -2,14 +2,13 @@
 
 ## Project overview
 
-This essence of this project is to gather some insights on the streaming data of music industry specially for the digital platform/application Spotify.
-There are 2 major aspects covered in the project which are -
+The essence of this project is to gather some insights on the music industry streaming data specifically for the digital platform/application Spotify. About two aspects covered in the project are -
   1. Artists Performance
   2. Albums release strategy
 
 ## Data source
 
-[Artist & Album dataset](https://github.com/jimdesai/Project1/blob/main/Artists%20%26%20Albums%20data.xlsx) - I have used this primary dataset which contains detailed information on the top tracks data, albums release data and Artist-Fans engagement data of 40 most popular Indian music artists.
+[Artist & Album dataset](https://github.com/jimdesai/Project1/blob/main/Artists%20%26%20Albums%20data.xlsx) - I have used this primary dataset containing detailed information on the top tracks data, albums release data and Artist-Fans engagement data of 40 most popular Indian music artists.
 
 ## Tools
 
@@ -35,15 +34,15 @@ Through the use Spotify web API and python, the following code was performed for
          
 ## EDA (Exploratory Data Analysis)
 
-EDA involves exploring the Artist & Album dataset to answer key questions such as -
-  1. How much average popularity does the Indian artists share on the music streaming platform in respect to the global music streaming industry?
-  2. Aggregating the last 10 years data, how much is the difference between the amount of album releases and an ideal Pareto 80/20 principle?
-  3. Which are the regions across the world in which the albums were not released?
-  4. When the topic is on artists interactions with the fans, which are the Indian artists that are known for strong positivity,enthusiasm and satisfaction among the fans?
+EDA involves exploring the Artist & Album dataset to answer some key questions such as -
+  1. How much average popularity does the Indian artists share on the music streaming platform against the global music streaming industry?
+  2. Aggregating the last ten years data, how much is the difference between the amount of album releases and an ideal Pareto 80/20 principle?
+  3. In which regions of the world the albums are not released?
+  4. When the topic is on artists interactions with the fans, which are the Indian artists known for strong positivity,enthusiasm and satisfaction among the fans?
 
 ## Data analysis
 
-Here is an interactive tableau dashboard that I generated which shows the answers of above key questions in a visual format.
+Here is an interactive tableau dashboard that I generated showing the answers of the EDA questions in a visual format.
   
 [Download here](https://public.tableau.com/views/Project1_17048172258370/Story1?:language=en-US&:display_count=n&:origin=viz_share_link)
 

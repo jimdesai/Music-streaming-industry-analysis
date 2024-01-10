@@ -44,6 +44,8 @@ EDA involves exploring the Artist & Album dataset to answer key questions such a
 ## Data analysis
 
 Here is an interactive tableau dashboard that I generated which shows the answers of above key questions in a visual format.
+  
+[Download here](https://public.tableau.com/views/Project1_17048172258370/Story1?:language=en-US&:display_count=n&:origin=viz_share_link)
 
 ## References
 

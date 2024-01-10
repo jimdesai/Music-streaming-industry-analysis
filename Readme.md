@@ -18,7 +18,7 @@ There are 2 major aspects covered in the project which are -
 
 ## Data extraction & transformation
 
-Through the use Spotify web API and python, the following code performed the web scraping method for data extraction:
+Through the use Spotify web API and python, the following code was performed for the web scraping method of data extraction:
 
       -  ```python
          #Process the data

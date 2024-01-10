@@ -9,7 +9,7 @@ There are 2 major aspects covered in the project which are -
 
 ## Data source
 
-Artist & Album dataset - I have used this primary dataset which contains detailed information on the top tracks data, albums release data and Artist-Fans engagement data of 40 most popular Indian music artists.
+[Artist & Album dataset](https://github.com/jimdesai/Project1/blob/main/Artists%20%26%20Albums%20data.xlsx) - I have used this primary dataset which contains detailed information on the top tracks data, albums release data and Artist-Fans engagement data of 40 most popular Indian music artists.
 
 ## Tools
 

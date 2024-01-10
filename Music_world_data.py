@@ -128,44 +128,22 @@ class music_data(object):
     
     def artist_album_datasave(xlsx_file):
         with pd.ExcelWriter(xlsx_file, mode="a") as writer:
-            #artist_top_tracks_data.to_excel(writer, sheet_name="Top tracks data")
+            artist_top_tracks_data.to_excel(writer, sheet_name="Top tracks data")
             artist_genre_data.to_excel(writer, sheet_name="Genre data")
-            #artist_album_data.to_excel(writer, sheet_name="Albums data")
-            #album_market_data.to_excel(writer, sheet_name="Market data")
-            """ chunksize = len(album_market_data) // 1048576
-            if len(album_market_data) % 1048576 > 0:
-                chunksize += 1
-            for i in range(0, len(album_market_data), chunksize):
-                chunk = album_market_data.iloc[i:i + chunksize]
-                chunk.to_excel(writer, sheet_name=f'Market data_{i+1}') """
+            artist_album_data.to_excel(writer, sheet_name="Albums data")
+            album_market_data.to_excel(writer, sheet_name="Market data")
         return None
-   
-#Assign the variables
-cid = 'bb3fe30ef7b347799740701169250ab3'
-secret = '124af749967843b1bcf2b117d9cb3ef0'
-""" link = input("Playlist_link - ") """
+
 
 #Process the data
-""" uri = link.split("/")[-1].split("?")[0] """
 sp = Authenticate.spoauth(cid, secret)
-""" playlist_data = music_data.playlist_data(sp, uri)
-artist_data = music_data.artist_data(sp,uri)
-album_data = music_data.album_data(sp,uri) """
 """ ------------------------------------------------- """
 artist_source_data = music_data.artist_source_data('Artists data.csv')
-#artist_top_tracks_data = music_data.Top_tracks_data(0,40,sp,artist_source_data)
+artist_top_tracks_data = music_data.Top_tracks_data(0,40,sp,artist_source_data)
 artist_genre_data = music_data.artist_genre_data(0,40,sp,artist_source_data)
-#artist_album_data = music_data.artist_album_data(0,40,sp,artist_source_data).drop_duplicates()
-#album_market_data = music_data.album_market_data(sp,artist_source_data).drop_duplicates()
+artist_album_data = music_data.artist_album_data(0,40,sp,artist_source_data).drop_duplicates()
+album_market_data = music_data.album_market_data(sp,artist_source_data).drop_duplicates()
 
-#Print the data
-""" print(playlist_data.shape)
-print(artist_data.shape)
-print(album_data.shape) """
-""" ------------------------- """
-""" print(artist_top_tracks_data.shape)
-print(artist_genre_data.shape)
-print(artist_album_data.shape) """
 
 #Save the data
 music_data.artist_album_datasave("Artists data.xlsx")

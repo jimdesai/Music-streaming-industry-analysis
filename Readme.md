@@ -20,18 +20,18 @@ There are 2 major aspects covered in the project which are -
 
 Through the use Spotify web API and python, the following code was performed for the web scraping method of data extraction:
 
-      -  ```python
-         #Process the data
-         sp = Authenticate.spoauth(cid, secret)
-         artist_source_data = music_data.artist_source_data('Artists data.csv')
-         artist_top_tracks_data = music_data.Top_tracks_data(0,40,sp,artist_source_data)
-         artist_genre_data = music_data.artist_genre_data(0,40,sp,artist_source_data)
-         artist_album_data = music_data.artist_album_data(0,40,sp,artist_source_data).drop_duplicates()
-         album_market_data = music_data.album_market_data(sp,artist_source_data).drop_duplicates()
+ ```python
+ #Process the data
+ sp = Authenticate.spoauth(cid, secret)
+ artist_source_data = music_data.artist_source_data('Artists data.csv')
+ artist_top_tracks_data = music_data.Top_tracks_data(0,40,sp,artist_source_data)
+ artist_genre_data = music_data.artist_genre_data(0,40,sp,artist_source_data)
+ artist_album_data = music_data.artist_album_data(0,40,sp,artist_source_data).drop_duplicates()
+ album_market_data = music_data.album_market_data(sp,artist_source_data).drop_duplicates()
 
-         #Save the data
-         music_data.artist_album_datasave("Artists data.xlsx")
-         ```
+ #Save the data
+ music_data.artist_album_datasave("Artists data.xlsx")
+ ```
          
 ## EDA (Exploratory Data Analysis)
 

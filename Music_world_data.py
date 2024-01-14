@@ -42,7 +42,6 @@ class music_data(object):
        popularity = pd.DataFrame()
        for x in sp.playlist_tracks(uri)["items"]:
            main_artists = main_artists._append(pd.DataFrame([x["track"]["artists"][0]["name"]],columns=["Main Artist"]))
-           #secondary_artists = pd.DataFrame([x["track"]["artists"][1]["name"] for x in sp.playlist_tracks(uri)["items"]],columns=["Secondary Artist"])
            main_artists_uri = x["track"]["artists"][0]["uri"]
            popularity = popularity._append(pd.DataFrame([sp.artist(main_artists_uri)["popularity"]],columns=["Popularity"]))
        merged_data = pd.concat([main_artists,popularity],axis=1)
@@ -106,10 +105,6 @@ class music_data(object):
         row = artist_source_data.iloc[0,:]
         for x in sp.artist_albums(row.uri)["items"]:
             merged_data = data._append(pd.DataFrame([y for y in x["available_markets"]],columns=['Available markets']))
-            """ data['Albums'] = list(itertools.repeat(x["name"], len(data)))
-            data['Artist'] = list(itertools.repeat(row.Artist, len(data)))
-            merged_data = merged_data._append(data)
-        merged_data = merged_data[['Artist','Albums','Available markets']].set_index('Artist') """
         return merged_data
     
     def artist_source_data(csv_file):

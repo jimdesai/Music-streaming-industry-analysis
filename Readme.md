@@ -1,4 +1,4 @@
-# Music Streaming Industry (Analysis)
+# Music Streaming Industry analysis
 
 ## Project overview
 
